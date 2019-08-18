@@ -1,4 +1,4 @@
 (
-  title: "dungeon",
-  dimensions: Some((960, 540)),
+  title: "Amethyst Dungeon",
+  dimensions: Some((1280, 720)),
 )
