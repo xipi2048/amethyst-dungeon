@@ -88,6 +88,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "amethyst-dungeon"
+version = "0.1.0"
+dependencies = [
+ "amethyst 0.12.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
 name = "amethyst_animation"
 version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1019,13 +1026,6 @@ dependencies = [
 name = "dtoa"
 version = "0.4.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-
-[[package]]
-name = "dungeon"
-version = "0.1.0"
-dependencies = [
- "amethyst 0.12.0 (registry+https://github.com/rust-lang/crates.io-index)",
-]
 
 [[package]]
 name = "dwrote"

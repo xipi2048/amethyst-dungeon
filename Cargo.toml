@@ -1,5 +1,5 @@
 [package]
-name = "dungeon"
+name = "amethyst-dungeon"
 version = "0.1.0"
 authors = []
 edition = "2018"
@@ -11,3 +11,4 @@ amethyst = "0.12.0"
 empty = ["amethyst/empty"]
 metal = ["amethyst/metal"]
 vulkan = ["amethyst/vulkan"]
+default = ["vulkan"]
