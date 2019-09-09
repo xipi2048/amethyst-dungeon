@@ -5,10 +5,12 @@ authors = []
 edition = "2018"
 
 [dependencies]
-amethyst = "0.12.0"
+amethyst = "0.12.0"               # Data-oriented game engine written in Rust
+serde = "1.0.100"                 # A generic serialization/deserialization framework
 
 [features]
 empty = ["amethyst/empty"]
 metal = ["amethyst/metal"]
 vulkan = ["amethyst/vulkan"]
+
 default = ["vulkan"]
