@@ -1,4 +1,5 @@
 (
   title: "Amethyst Dungeon",
   dimensions: Some((1280, 720)),
+  icon: Some("assets/texture/amethyst-logo.png")
 )

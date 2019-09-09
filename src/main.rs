@@ -1,6 +1,7 @@
+mod game;
+
 use amethyst::{
     core::transform::TransformBundle,
-    ecs::prelude::{ReadExpect, Resources, SystemData},
     prelude::*,
     renderer::{
         plugins::{RenderFlat2D, RenderToWindow},
@@ -10,19 +11,15 @@ use amethyst::{
     utils::application_root_dir,
 };
 
-struct MyState;
-
-impl SimpleState for MyState {
-    fn on_start(&mut self, _data: StateData<'_, GameData<'_, '_>>) {}
-}
-
 fn main() -> amethyst::Result<()> {
     amethyst::start_logger(Default::default());
 
+    use crate::game::GameState;
+
     let app_root = application_root_dir()?;
 
-    let config_dir = app_root.join("config");
-    let display_config_path = config_dir.join("display.ron");
+    let asset_dir = app_root.join("assets");
+    let display_config_path = app_root.join("config/display.ron");
 
     let game_data = GameDataBuilder::default()
         .with_bundle(
@@ -35,7 +32,8 @@ fn main() -> amethyst::Result<()> {
         )?
         .with_bundle(TransformBundle::new())?;
 
-    let mut game = Application::new("/", MyState, game_data)?;
+    let mut game = Application::new(asset_dir, GameState::default(), game_data)?;
+    
     game.run();
 
     Ok(())
