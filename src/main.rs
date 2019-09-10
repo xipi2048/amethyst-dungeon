@@ -1,19 +1,17 @@
 mod game;
 
-use {
-    amethyst::{
-        animation::AnimationBundle,
-        assets::PrefabLoaderSystem,
-        core::transform::TransformBundle,
-        prelude::*,
-        renderer::{
-            plugins::{RenderFlat2D, RenderToWindow},
-            sprite::SpriteRender,
-            types::DefaultBackend,
-            RenderingBundle,
-        },
-        utils::application_root_dir,
+use amethyst::{
+    animation::AnimationBundle,
+    assets::PrefabLoaderSystem,
+    core::transform::TransformBundle,
+    prelude::*,
+    renderer::{
+        plugins::{RenderFlat2D, RenderToWindow},
+        sprite::SpriteRender,
+        types::DefaultBackend,
+        RenderingBundle,
     },
+    utils::application_root_dir,
 };
 
 fn main() -> amethyst::Result<()> {
