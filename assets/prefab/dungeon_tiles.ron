@@ -1,0 +1,38 @@
+#![enable(implicit_some)]
+/*!
+    @import ../../src/dungeon.rs#Prefab
+    @import ../../src/dungeon.rs#SpriteData
+    Prefab<SpriteData>
+*/
+
+Prefab(
+    entities: [
+        PrefabEntity(
+            data: SpriteData (
+                sprite_scene: (
+                    sheet: Sheet(
+                        name: "tiles",
+                        texture: File("texture/0x72_DungeonTilesetII_v1.2.png",
+                            "IMAGE", {
+                                sampler_info: (
+                                    min_filter: Nearest,
+                                    mag_filter: Nearest,
+                                    mip_filter: Nearest,
+                                    wrap_mode: (Tile, Tile, Tile),
+                                    lod_bias: (0),
+                                    lod_range: (
+                                        start: ( 0 ),
+                                        end: ( 8000 ),
+                                    ),
+                                    comparison: None,
+                                    border: (0),
+                                    anisotropic: Off,
+                                ),
+                            }
+                        )
+                    )
+                )
+            )
+        )
+    ]
+)
